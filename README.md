@@ -20,68 +20,38 @@ This package aims to alleviate these frustrations, to allow us to make the most 
 npm install jests-mock-utils
 ```
 
-## Usage
+## Example Usage
 
-### Importing the Library
-
-```typescript
-import {
-    createAutomaticTypedMock,
-    createTypedMockClass,
-    createMockedClassInstance,
-    createStrictTypedMockFunction,
-    createPartialTypedMockFunction,
-    createDeepPartialTypedMockFunction,
-    getTypedMockInstances,
-} from 'jests-mock-utils';
-```
-
-### Creating a Strongly Typed Mock Object
+The following example shows how to create a mock object from a type.
 
 ```typescript
-const mockUser = createAutomaticTypedMock<User>();
-```
+// databaseClient.ts
+export interface DatabaseClient {
+    query(query: string): DatabaseResponse;
+}
 
-### Creating a Mock Class
+// dataFetcher.ts
+export class DataFetcher {
+    private client: DatabaseClient;
 
-```typescript
-const MockUserClass = createTypedMockClass(User);
-```
+    constructor(client: DatabaseClient) {
+        this.client = client;
+    }
 
-### Creating an Instance of a Mock Class
+    fetchAllCustomers(): Customer[] {
+        return this.extractCustomersFromResponse(client.query());
+    }
+}
 
-```typescript
-const mockUserInstance = createMockedClassInstance(MockUserClass);
-```
+// dataFetcher.ts
+import { DatabaseClient } from '../databaseClient';
+import { DataFetcher } from '../dataFetcher';
+import { createMockFromType } from 'jests-mock-utils';
 
-### Mocking Functions with Strict Return Types
-
-```typescript
-const mockFunction = createStrictTypedMockFunction(someFunction);
-```
-
-### Mocking Functions with Partial Return Types
-
-```typescript
-const mockFunction = createPartialTypedMockFunction(someFunction);
-```
-
-### Mocking Functions with Deep Partial Return Types
-
-```typescript
-const mockFunction = createDeepPartialTypedMockFunction(someFunction);
-```
-
-### Get Instances of a Mock Class
-
-```typescript
-const mockInstances = getTypedMockInstances(MockUserClass);
+const mockDatabaseClient = createMockFromType<DatabaseClient>();
+const testDataFetcher = new DataFetcher(mockDatabaseClient);
 ```
 
 ## API Documentation
 
 <Details about each function, their parameters, and what they return>
-
-## Contributing
-
-Feel free to open issues or PRs!
