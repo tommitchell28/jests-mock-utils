@@ -8,3 +8,21 @@ export function createTypedMockClass<T extends jest.Constructable>(
 ): jest.MockedClass<T> {
     return ClassType as jest.MockedClass<T>;
 }
+
+/**
+ * Return the instances of a mock class, wrapped with the correct Jest mock types
+ * @param MockedClassType
+ * @returns An array of objects that represent the mock instances of a class mock.
+ * @example
+ *
+ * const import { Foo } from '../foo''
+ * const MockFoo = createTypedMockClass(Foo);
+ * ...
+ * const mockFooInstances = getTypedMockInstances<typeof Foo>(MockFoo);
+ *
+ */
+export function getTypedMockInstances<T extends jest.Constructable>(
+    MockedClassType: jest.MockedClass<T>
+): jest.MockedObject<InstanceType<T>>[] {
+    return MockedClassType.mock.instances as jest.MockedObject<InstanceType<T>>[];
+}
