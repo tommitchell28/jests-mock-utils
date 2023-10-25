@@ -1,7 +1,7 @@
 {
     "name": "jests-mock-utils",
     "version": "1.0.0",
-    "description": "",
+    "description": "A TypeScript-Jest utility library that simplifies the creation of strongly-typed mocks.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
