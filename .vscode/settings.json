@@ -1,0 +1,5 @@
+{
+    "eslint.lintTask.options": "--config .eslintrc.js",
+    "eslint.validate": ["javascript", "typescript"],
+    "typescript.tsc.autoDetect": "off"
+}
