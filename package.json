@@ -7,6 +7,11 @@
     "files": [
         "dist"
     ],
+    "keywords": [
+        "Jest",
+        "TypeScript",
+        "Mocking"
+    ],
     "scripts": {
         "build": "tsc",
         "format": "prettier --write .",
