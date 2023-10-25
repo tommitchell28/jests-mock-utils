@@ -1,6 +1,6 @@
 {
     "name": "jests-mock-utils",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Tom Mitchell",
     "description": "A TypeScript-Jest utility library that simplifies the creation of strongly-typed mocks.",
     "homepage": "https://github.com/tommitchell28/jests-mock-utils",
