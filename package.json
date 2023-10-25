@@ -10,6 +10,7 @@
     "scripts": {
         "build": "tsc",
         "format": "prettier --write .",
+        "docs:generate": "typedoc src/index.ts",
         "lint": "eslint .",
         "lint:staged": "lint-staged",
         "prepare": "husky install",
@@ -31,6 +32,7 @@
         "lint-staged": "^15.0.2",
         "prettier": "^3.0.3",
         "ts-jest": "^29.1.1",
+        "typedoc": "^0.25.2",
         "typescript": "^5.2.2"
     },
     "lint-staged": {
