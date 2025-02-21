@@ -16,7 +16,8 @@
     ],
     "scripts": {
         "build": "tsc",
-        "format": "prettier --write .",
+        "format:write": "prettier --write .",
+        "format:check": "prettier --check .",
         "docs:generate": "typedoc src/index.ts",
         "lint": "eslint .",
         "lint:staged": "lint-staged",

@@ -10,9 +10,9 @@ This package aims to alleviate these frustrations, to allow us to make the most 
 
 ## Features
 
--   **Strongly Typed Mocks**: Get full IntelliSense support and type checking.
--   **Convenient Mock Creation**: Easily create mock objects, classes, and functions with strong types.
--   **Partial and Deep Partial Mocks**: Return partial objects from your mock functions, even deeply nested ones.
+- **Strongly Typed Mocks**: Get full IntelliSense support and type checking.
+- **Convenient Mock Creation**: Easily create mock objects, classes, and functions with strong types.
+- **Partial and Deep Partial Mocks**: Return partial objects from your mock functions, even deeply nested ones.
 
 ## Installation
 

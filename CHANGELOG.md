@@ -13,10 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Homepage to package.json.
+- Homepage to package.json.
 
 ## [1.0.0] - 2023-10-25
 
 ### Added
 
--   New mock utility functions.
+- New mock utility functions.
