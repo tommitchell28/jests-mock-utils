@@ -1,3 +1,10 @@
+// @ts-check
+
+const { ESLint } = require('eslint');
+
+/**
+ * @type {ESLint.ConfigData}
+ */
 module.exports = {
     extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
     ignorePatterns: ['.eslintrc.js', 'jest.config.js'],
