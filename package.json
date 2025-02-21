@@ -19,7 +19,7 @@
         "format:write": "prettier --write .",
         "format:check": "prettier --check .",
         "docs:generate": "typedoc src/index.ts",
-        "lint": "eslint .",
+        "lint": "eslint src/ tests/",
         "lint:staged": "lint-staged",
         "prepare": "husky install",
         "prepublishOnly": "npm run build",
